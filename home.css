@@ -1,0 +1,136 @@
+body {
+    background-color: whitesmoke;
+}
+
+h1,h2 {
+    color: #6a110a;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+}
+/* Review the current best practice for fonts like this in h3 */
+h3 { 
+    color: #b31607;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Work in a Logo on the Right hand side of the navbar */
+.navbar {
+    width: 100%;
+    background-color: whitesmoke;
+    overflow: auto;
+}
+
+.navbar a {
+    float: left;
+    padding: 1.2em;
+    color: #b31607;
+    text-decoration: none;
+    font-size: 1em;
+    text-align: center;
+    width: 22%;
+    /* If going with 3 length it would be 33.33%. Basically divide 100% by the number of liks you have to get equally spaced. */
+}
+
+/*Hover effects for the navbar to show where cursor is at */
+.navbar a:hover {
+    background-color: darkblue;
+}
+ /* Active Selection will be hightlighted this color*/
+.navbar a:active {
+    background-color: #0AD152;
+}
+
+
+/* Need to fix the Portfolio Portion*/
+
+/* Container position*/
+.container {
+    position: relative;
+    
+}
+
+
+/* hide images by default */
+.mySlides {
+    display: none;
+}
+
+/* Pointer while hovering over thumbnails */
+.cursor {
+    cursor: crosshair;
+}
+/* Next and Previous Buttons */
+.prev, 
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 1em;
+    border-radius: 0 3px 3px 0;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+/* Position of the Next and Previous Button */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On Hover, add transparency */
+.prev:hover, 
+.next:hover {
+    background-color: rgba(234, 22, 22, 0.8);
+}
+
+/* Container for Image Text */
+.caption-container {
+    text-align: center;
+    background-color: #111010;
+    padding: 2px 16px;
+    color: #FDF9F8;
+}
+
+.row:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Will make 6 columsn eventually*/
+.column {
+    float: left;
+    width: 16.66%;
+}
+
+/* Adding transparency for thumbnail images */
+.cursor {
+    opacity: 0.6;
+}
+
+.active,
+.cursor:hover {
+    opacity: 1;
+}
+
+
+/* Adding responsiveness */
+@media screen and (max-width: 500px) {
+    .navbar a {
+        float: none;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+}
+
