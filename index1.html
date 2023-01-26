@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="monetization" content="$ilp.gatehub.net/116145700" />
+
+<head>
+    <title>Str8Rogue</title>
+    <link rel="stylesheet" href="RogueStyle.css">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Barcode+128+Text" rel="stylesheet">
+</head>
+
+<body>
+    
+
+    <div id='barcodeContainer' class='glowing-animation'>
+      <h1 id="barcode">
+       <!-- <span class = "animatedSpan ">$</span> -->
+        <span class = "animatedSpan">@</span>
+        <span class = "animatedSpan">S</span>
+        <span class = "animatedSpan">T</span>
+        <span class = "animatedSpan">R</span>
+        <span class = "animatedSpan">8</span>
+        <span class = "animatedSpan"> </span>
+        <span class = "animatedSpan">R</span>
+        <span class = "animatedSpan">O</span>
+        <a href="home.html"><span class = "animatedSpan">G</a></span>
+        <span class = "animatedSpan">U</span>
+        <span class = "animatedSpan">E</span>
+        <!-- <span class = "animatedSpan">@</span> -->
+        <!-- <span class = "animatedSpan">$</span> -->
+        
+    
+        
+        
+      </h1>
+    </div>    
+    
+
+</body>
+
+<script>let barcodeSpans = $("#barcode").children();
+
+    function barcodeAnimation()
+    {
+      barcodeSpans.each(function(i)
+      {
+        let span = $(this);
+        setTimeout(function()
+        {
+          // highlight each individual span with 200ms between each
+          span.toggleClass('highlighted');
+          // span.fadeToggle("slow");
+        }, 200*i);});
+      
+      barcodeSpans.each(function(i)
+      {
+        let span = $(this);
+        setTimeout(function()
+        {
+          // remove the highlighting from each span with 20ms between each
+          span.toggleClass('highlighted');
+          
+        }, 20*i);});
+    }
+    
+    $(document).ready(function()
+    {
+      setInterval(barcodeAnimation, 4000);
+    });
+    </script>
+
+
+</html>
